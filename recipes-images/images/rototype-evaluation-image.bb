@@ -103,7 +103,6 @@ IMAGE_INSTALL += " \
 	packagegroup-core-full-cmdline \
 	packagegroup-fsl-tools-audio \
 	packagegroup-fsl-gstreamer1.0 \
-	packagegroup-qt5-qtcreator-debug \
 	packagegroup-core-buildessential \ 
 	${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'weston-init', '', d)} \
 	${ERPC_COMPS} \
