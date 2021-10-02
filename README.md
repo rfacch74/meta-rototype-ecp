@@ -11,6 +11,14 @@ repo init -u https://source.codeaurora.org/external/imx/imx-manifest -b imx-linu
 repo sync
 ```
 
+Clone git
+--------------
+
+```
+cd ~/imx-yocto-bsp/source
+git clone git://github.com/rfacch74/meta-rototype-ecp.git;protocol=https
+```
+
 
 SOMs supported
 --------------
