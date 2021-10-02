@@ -1,0 +1,32 @@
+From 33c59fbe2dd3873fdaf3362117c2a8e7eff7e62a Mon Sep 17 00:00:00 2001
+From: Giacomo Covoni <g.covoni@rototype.com>
+Date: Fri, 2 Jul 2021 11:26:34 +0200
+Subject: [PATCH] set destination url to localhost
+
+---
+ qml/main.qml          | 2 +-
+ qt-kiosk-browser.conf | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/qml/main.qml b/qml/main.qml
+index d905b47..5b1fb6a 100644
+--- a/qml/main.qml
++++ b/qml/main.qml
+@@ -62,7 +62,7 @@ Window {
+     WebEngineView {
+         id: webView
+ 
+-        url: "http://www.ossystems.com.br"
++        url: "http://localhost"
+ 
+         anchors.fill: parent
+     }
+diff --git a/qt-kiosk-browser.conf b/qt-kiosk-browser.conf
+index 9ea7ca3..b0e8a4b 100644
+--- a/qt-kiosk-browser.conf
++++ b/qt-kiosk-browser.conf
+@@ -1,3 +1,3 @@
+ {
+-    "URL": "https://www.ossystems.com.br/"
++    "URL": "https://localhost/"
+ }

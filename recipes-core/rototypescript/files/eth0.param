@@ -1,0 +1,3 @@
+ipaddr=169.254.10.10
+gwaddr=169.254.10.1
+dhcp_mode=disable
