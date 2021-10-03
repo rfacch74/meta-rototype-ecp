@@ -6,14 +6,21 @@ file_prboard="/home/root/_program"
 file_update="/home/root/update/_update"
 file_update_usb="/run/media/sda1/_update_usb"
 
+
+
+
 if [ -f "$file_prboard" ]
 then
         systemctl stop weston
         psplash -n &
         psplash-write "ECP SYSTEM PROGRAMMING......"
         sleep 1.5
+	if [ -f "$file_update_usb" ]
+	then
+		mount /dev/sda1 /home/root/update
+	fi
 
-        echo "    ECP SDCARD UPDATE FOUND............................>"
+	psplash-write "MSG ECP_PROGRAMMING_FOUND.."
         psplash-write "PROGRESS 10"
         /home/root/script/prEMMC.sh
         psplash-write "PROGRESS 40"
@@ -23,7 +30,7 @@ then
         psplash-write "PROGRESS 60"
         /home/root/script/prSoc.sh
         psplash-write "PROGRESS 100"
-        killall pslash
+        killall psplash
         systemctl start weston
 fi
 
@@ -46,6 +53,5 @@ then
         /home/root/script/prFpga.sh
         /home/root/script/prSoc.sh
 fi
-
 
 
