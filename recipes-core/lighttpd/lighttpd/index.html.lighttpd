@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Responsive clear field button</title>
+</head>
+  
+<body>
+    <h1>ECP Platform</h1>
+    <b>Responsive clear field button</b>
+    <br><br>
+    <div class="buttonIn">
+        <input type="text" id="enter">
+        <button id="clear">clear</button>
+    </div>
+</body>
+  
+</html>
