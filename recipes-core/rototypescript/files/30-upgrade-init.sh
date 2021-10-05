@@ -3,6 +3,7 @@
 echo "    ECP Platform Update>"
 
 file_prboard="/home/root/_program"
+file_prusb="/run/media/sda1/_program"
 file_update="/home/root/update/_update"
 file_update_usb="/run/media/sda1/_update_usb"
 
@@ -15,7 +16,7 @@ then
         psplash -n &
         psplash-write "ECP SYSTEM PROGRAMMING......"
         sleep 1.5
-	if [ -f "$file_update_usb" ]
+	if [ -f "$file_prusb" ]
 	then
 		mount /dev/sda1 /home/root/update
 	fi
