@@ -15,7 +15,7 @@ Clone git
 --------------
 
 ```
-cd ~/imx-yocto-bsp/source
+cd ~/imx-yocto-bsp/sources
 git clone git://github.com/rfacch74/meta-rototype-ecp.git;protocol=https
 ```
 
@@ -40,6 +40,7 @@ First build
 -----------
 
 ```
+cd ~/imx-yocto-bsp
 DISTRO=ecp-imx-wayland MACHINE=imx8mq-ecp source imx-setup-release.sh -b build-rototype-ecp
 bitbake-layers add-layer ../sources/meta-rototype-ecp
 bitbake rototype-evaluation-image
